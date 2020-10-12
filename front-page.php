@@ -17,7 +17,7 @@
                     // в переменную мы запихнем по запросу на сервер посты
                     $myposts = get_posts([ 
                         'numberposts' => 1,    // выводим последние постоы
-                        'category_name' => 'javascript', // рубрика
+                        'category_name' => 'javascript, css, html, web design', // рубрика
                     ]);
 
                     // проверяем если есть посты 
@@ -40,7 +40,7 @@
                 </a>
                 <div class="post-text">
                     <?php the_category(); ?>
-                    <h2 class="post-title"><?php the_title(); ?></h2>
+                    <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 60, '...'); ?></h2>
                     <a href="<?php echo get_the_permalink(); ?>" class="more">Читать дальше</a>
                 </div>
 
@@ -77,6 +77,7 @@
                         $myposts = get_posts([ 
                         'numberposts' => 5,    // выводим последние постоы
                         'offset' => 1, // пропускаем последний и выводим следующие
+                        'category_name' => 'javascript, css, html, web design',
                         // 'orderby'     => 'date',
                         // 'order'       => 'ASC', 
                         ]);
@@ -88,7 +89,7 @@
                     <li class="post">
                         <?php the_category(); ?>
                         <a class="post-permalink" href="<?php echo get_the_permalink(); ?>">
-                            <h4 class="post-title"><?php the_title(); ?></h4>
+                            <h4 class="post-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...' . '-->' . ';))'); ?></h4>
                         </a>
                     </li>
                     <!--  -->
@@ -112,22 +113,23 @@
 </main>
 
 <div class="container">
-    <ul class="posts-list">
+    <ul class="article-list">
         <!--  -->
         <?php
             global $post;
 
             $myposts = get_posts([ 
             'numberposts' => 4,
+            'category_name' => 'articles',
             ]);
             if( $myposts ){
             foreach( $myposts as $post ){
                 setup_postdata( $post );
         ?>
         <!--  -->
-        <li class="post-item">
-            <a class="post-permalink" href="<?php echo get_the_permalink(); ?>">
-                <h4 class="post-title"><?php the_title(); ?></h4>
+        <li class="article-item">
+            <a class="article-permalink" href="<?php echo get_the_permalink(); ?>">
+                <h4 class="article-title"><?php echo mb_strimwidth(get_the_title(), 0, 30, '...'); ?></h4>
             </a>
             <img width="65" height="65" src="<?php echo get_the_post_thumbnail_url(null, 'thumbnail'); ?>" alt="">
         </li>

@@ -28,13 +28,6 @@ body {
   margin: auto;
 }
 
-.container {
-  width: 1136px;
-  margin: 0;
-  padding: 0;
-  margin: auto;
-}
-
 .header {
   background-color: #262D33;
   padding-top: 15px;
@@ -323,4 +316,68 @@ body {
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+.article-list {
+  width: 1136px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  margin-top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  background: #30363D;
+  border-radius: 10px;
+}
+
+.article-item {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.article-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  height: 70%;
+  width: 1px;
+  background: #4B5157;
+}
+
+.article-permalink {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  width: 150px;
+}
+
+.article-permalink:hover {
+  color: #ffffff;
+}
+
+.article-title {
+  margin: 0;
 }
