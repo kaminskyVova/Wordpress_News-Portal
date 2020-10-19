@@ -13,11 +13,14 @@
         .widget
             &-title
                 margin: 0
-                font-family: Roboto Slab
+                font-family: "Roboto Slab", sans-serif
                 font-style: normal
-                font-weight: bold
-                font-size: 16px
-                line-height: 25px
+                font-weight: 900
+                text-transform: none
+                font-size: 18px
+                line-height: 27px
+                color: #ffffff
+                padding: 0               
             &-link
                 position: absolute
                 bottom: 0
@@ -43,4 +46,56 @@
             line-height: 20px
             color: #C1F4F5
             margin-top: 20px
+    &_tag_cloud
+        background: #ffffff
+        border-radius: 10px
+        max-height: 370px
+        margin-bottom: 30px
+    &-title
+        padding: 20px 25px 
+        margin: 0
+        color: #262D33
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        font-weight: 900
+    .tagcloud
+        border-top: 1px solid #D9DADB
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        padding: 25px
+        padding-bottom: 35px
+    .tag-cloud-link
+        text-decoration: none
+        background: #ffffff
+        font-family: "Lato", sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 14px
+        line-height: 20px
+        color: #262D33
+        border: 1px solid #D9DADB
+        border-radius: 5px
+        padding: 5px 15px
+        margin-right: 10px
+        margin-bottom: 15px
 
+.social
+    &_widget
+        background: #ffffff
+        text-align: center
+        height: 170px
+        border-radius: 10px
+.widget
+    &-title
+        font-family: "Roboto Black", sans-serif
+        text-transform: capitalize
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        line-height: 25px
+    &-link 
+        text-decoration: none
+        padding-bottom: 40px
+        margin-left: 15px
