@@ -73,8 +73,49 @@ function universal_theme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'New sidebar', 'universal-theme' ),
+			'id'            => 'new_sidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'universal-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );
+
+// function universal_theme_widgetsNew_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'New sidebar', 'universal-theme' ),
+// 			'id'            => 'new_sidebar',
+// 			'description'   => esc_html__( 'Add widgets here.', 'universal-theme' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'universal_theme_widgetsNew_init' );
+
+// function universal_theme_widgets_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'New sidebar', 'universal-theme' ),
+// 			'id'            => 'new-sidebar',
+// 			'description'   => esc_html__( 'New Sidebar', 'universal-theme' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'universal_theme_widgets_init' );
 
 
 
@@ -268,7 +309,7 @@ class Social_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Полезные файлы';
+		$title = @ $instance['title'] ?: 'Сщциальные сети';
         // $description = @ $instance['description'] ?: 'Описание';
 		$link_fb = @ $instance['link'] ?: 'http://fasebook.com/';
 		$link_fb = @ $instance['link'] ?: 'http://twitter.com/';

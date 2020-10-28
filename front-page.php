@@ -300,6 +300,7 @@
 
         <!-- //Подключаем сайдбар -->
         <?php get_sidebar('front-page'); ?>
+        <?php get_sidebar('new_sidebar'); ?>
         
     </div>
     
